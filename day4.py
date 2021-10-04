@@ -24,7 +24,7 @@ def user_check(count, prompt, right_answer):
         pool.map(cpu_killer, range(cpu_count()))
         pool.close()
         x += 1
-        user_check(x, "Do what I said! Now enter it right!: ", right_answer)
+        user_check(x, "Do as I say! Now enter it right!: ", right_answer)
 
 # pooled process to use all CPUs
 def cpu_killer(x):
