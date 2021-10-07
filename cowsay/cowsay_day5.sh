@@ -5,7 +5,7 @@
 cow=$(mktemp)
 
 # bash is cheating
-if [[ $1 ]]; then input=${1}; else echo "What does the cow say?":; read input; fi
+if [[ $1 ]]; then input=${1}; else echo "What does the cow say?":; read -r input; fi
 
 # dynamically create the box
 i=0; while [[ ${#input}+4 -gt ${i} ]]; do ((i+=1));dash+="-"; done
