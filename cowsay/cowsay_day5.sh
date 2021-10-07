@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 # cerner_2tothe5th_2021
 
-# precaution
-set -o nounset
-
 # yeah i know, it gets created in /tmp but who knows where this is being ran
 cow=$(mktemp)
 
@@ -15,7 +12,7 @@ i=0; while [[ ${#input}+4 -gt ${i} ]]; do ((i+=1));dash+="-"; done
 
 # populate tmp file
 echo -e "${dash}" >> ${cow}; echo -e "< ${input} >" >> ${cow}; echo -e "${dash}" >> ${cow}
-echo -En "
+echo -n "
         \   ^__^
          \  (oo)\_______
             (__)\       )\//\\
