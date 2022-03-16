@@ -8,7 +8,7 @@ cow=$(mktemp)
 if [[ $1 ]]; then input=${1}; else echo "What does the cow say?":; read -r input; fi
 
 # dynamically create the box
-i=0; while [[ ${#input}+4 -gt ${i} ]]; do ((i+=1));dash+="-"; done
+dash="";i=0; while [[ ${#input}+4 -gt ${i} ]]; do ((i+=1));dash+="-"; done
 
 # populate tmp file
 echo -e "${dash}" >> ${cow}; echo -e "< ${input} >" >> ${cow}; echo -e "${dash}" >> ${cow}
